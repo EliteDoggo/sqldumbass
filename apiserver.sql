@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 17 2019 г., 13:51
+-- Время создания: Дек 24 2019 г., 11:02
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.2.0
 
@@ -39,9 +39,12 @@ CREATE TABLE `allowed_photos` (
 --
 
 INSERT INTO `allowed_photos` (`id`, `user_id`, `photo_id`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 1, 3);
+(1, 3, 5),
+(2, 3, 6),
+(3, 1, 7),
+(4, 1, 8),
+(5, 1, 9),
+(6, 1, 10);
 
 -- --------------------------------------------------------
 
@@ -81,9 +84,12 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`id`, `name`, `url`, `owner_id`) VALUES
-(1, 'Untitled', 'http://api/images/1576571199.jpeg', 3),
-(2, 'Untitled', 'http://api/images/1576572027.jpeg', 1),
-(3, 'Untitled', 'http://api/images/1576572065.jpeg', 1);
+(5, 'Untitled', 'http://api/images/1577082573.jpeg', 3),
+(6, 'Untitled', 'http://api/images/1577082582.jpeg', 3),
+(7, 'Untitled', 'http://api/images/1577082605.jpeg', 1),
+(8, 'Untitled', 'http://api/images/1577082608.jpeg', 1),
+(9, 'Untitled', 'http://api/images/1577082609.jpeg', 1),
+(10, 'Untitled', 'http://api/images/1577082610.jpeg', 1);
 
 -- --------------------------------------------------------
 
@@ -152,7 +158,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `allowed_photos`
 --
 ALTER TABLE `allowed_photos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
@@ -164,7 +170,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
